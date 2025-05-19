@@ -1,8 +1,8 @@
 
-Projeto disponível em: 
+Projeto disponível em: https://feloti.github.io/Trabalho-1-LFA/
 
 Para executar localmente:
-* Mudar para o diretório /builds/web
+* Mudar para o diretório /docs
 * Iniciar servidor local
 `python -m http.server 8000`
 *e acessar
