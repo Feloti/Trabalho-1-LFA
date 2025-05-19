@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpiwfghi8y8vv"]
+
+[ext_resource type="Texture2D" uid="uid://bvc28cn7q6yhw" path="res://assets/rewards/chest.png" id="1_j21f4"]
+[ext_resource type="Script" uid="uid://5bgi7s17hxmg" path="res://scripts/objects/chest.gd" id="2_opa1x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_160l5"]
+atlas = ExtResource("1_j21f4")
+region = Rect2(16, 88, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hwtu"]
+atlas = ExtResource("1_j21f4")
+region = Rect2(32, 88, 16, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o1k16"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_160l5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hwtu")
+}],
+"loop": false,
+"name": &"open",
+"speed": 2.0
+}]
+
+[node name="Chest" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_o1k16")
+animation = &"open"
+offset = Vector2(17, 42)
+script = ExtResource("2_opa1x")

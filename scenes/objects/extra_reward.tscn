@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkkm83706ws65"]
+
+[ext_resource type="Texture2D" uid="uid://b4pvvdou5nwk5" path="res://assets/rewards/Treasure+.png" id="1_dipeg"]
+[ext_resource type="Script" uid="uid://riav7v1dlwbs" path="res://scripts/objects/extra_reward.gd" id="2_gjhat"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehfb2"]
+atlas = ExtResource("1_dipeg")
+region = Rect2(240, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1hwtu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehfb2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ExtraReward" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_1hwtu")
+offset = Vector2(17, 43)
+script = ExtResource("2_gjhat")

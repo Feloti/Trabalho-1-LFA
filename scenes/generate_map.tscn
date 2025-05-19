@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bec6y8e15j3xn"]
+
+[node name="GenerateMap" type="Node2D"]

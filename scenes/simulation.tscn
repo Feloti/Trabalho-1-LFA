@@ -1,0 +1,379 @@
+[gd_scene load_steps=20 format=3 uid="uid://b5amwb7bhxdlw"]
+
+[ext_resource type="Script" uid="uid://bcl5f4mysk2tc" path="res://scripts/main.gd" id="1_mwrr7"]
+[ext_resource type="Texture2D" uid="uid://ceo4grxbcxvl1" path="res://assets/terrains/taiga.png" id="2_gimvv"]
+[ext_resource type="Texture2D" uid="uid://cjxwkqcolg7bp" path="res://assets/terrains/desert.png" id="3_ehfb2"]
+[ext_resource type="Texture2D" uid="uid://dwu62kpu5bq8t" path="res://assets/terrains/swamp.png" id="4_160l5"]
+[ext_resource type="Texture2D" uid="uid://bei658c5e7okx" path="res://assets/terrains/rocky.png" id="5_1hwtu"]
+[ext_resource type="Script" uid="uid://bnwyladdyrymd" path="res://scripts/others/subscribe.gd" id="6_o1k16"]
+[ext_resource type="Texture2D" uid="uid://biwcre58yjb6e" path="res://assets/UI/CGB02-red_M_btn.png" id="7_ehfb2"]
+[ext_resource type="Texture2D" uid="uid://cycmsm1iij38l" path="res://assets/UI/icons/play.png" id="8_1hwtu"]
+[ext_resource type="Texture2D" uid="uid://q3yvosyiwkfv" path="res://assets/UI/icons/restaurar.png" id="9_it44y"]
+[ext_resource type="Texture2D" uid="uid://bpfa0u7uder64" path="res://assets/UI/icons/map.png" id="9_o1k16"]
+[ext_resource type="Texture2D" uid="uid://dvtd5sdls3t65" path="res://assets/UI/icons/trash_white.png" id="11_it44y"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_it44y"]
+texture = ExtResource("2_gimvv")
+0:0/0 = 0
+0:0/0/modulate = Color(1, 0.356863, 0.443137, 1)
+1:0/0 = 0
+1:0/0/modulate = Color(1, 0.356863, 0.443137, 1)
+2:0/0 = 0
+2:0/0/modulate = Color(1, 0.356863, 0.443137, 1)
+3:0/0 = 0
+3:0/0/modulate = Color(1, 0.356863, 0.443137, 1)
+4:0/0 = 0
+4:0/0/modulate = Color(1, 0.356863, 0.443137, 1)
+0:1/0 = 0
+0:1/0/modulate = Color(1, 0.356863, 0.443137, 1)
+1:1/0 = 0
+1:1/0/modulate = Color(1, 0.356863, 0.443137, 1)
+2:1/0 = 0
+2:1/0/modulate = Color(1, 0.356863, 0.443137, 1)
+3:1/0 = 0
+3:1/0/modulate = Color(1, 0.356863, 0.443137, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c1nw4"]
+texture = ExtResource("5_1hwtu")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gimvv"]
+texture = ExtResource("5_1hwtu")
+0:0/0 = 0
+0:0/0/modulate = Color(1, 0, 0.101961, 1)
+1:0/0 = 0
+1:0/0/modulate = Color(1, 0, 0.101961, 1)
+2:0/0 = 0
+2:0/0/modulate = Color(1, 0, 0.101961, 1)
+3:0/0 = 0
+3:0/0/modulate = Color(1, 0, 0.101961, 1)
+4:0/0 = 0
+4:0/0/modulate = Color(1, 0, 0.101961, 1)
+0:1/0 = 0
+0:1/0/modulate = Color(1, 0, 0.101961, 1)
+1:1/0 = 0
+1:1/0/modulate = Color(1, 0, 0.101961, 1)
+2:1/0 = 0
+2:1/0/modulate = Color(1, 0, 0.101961, 1)
+3:1/0 = 0
+3:1/0/modulate = Color(1, 0, 0.101961, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehfb2"]
+texture = ExtResource("5_1hwtu")
+0:0/0 = 0
+0:0/0/modulate = Color(0.101961, 0, 1, 1)
+1:0/0 = 0
+1:0/0/modulate = Color(0.101961, 0, 1, 1)
+2:0/0 = 0
+2:0/0/modulate = Color(0.101961, 0, 1, 1)
+3:0/0 = 0
+3:0/0/modulate = Color(0.101961, 0, 1, 1)
+4:0/0 = 0
+4:0/0/modulate = Color(0.101961, 0, 1, 1)
+0:1/0 = 0
+0:1/0/modulate = Color(0.101961, 0, 1, 1)
+1:1/0 = 0
+1:1/0/modulate = Color(0.101961, 0, 1, 1)
+2:1/0 = 0
+2:1/0/modulate = Color(0.101961, 0, 1, 1)
+3:1/0 = 0
+3:1/0/modulate = Color(0.101961, 0, 1, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_160l5"]
+texture = ExtResource("5_1hwtu")
+0:0/0 = 0
+0:0/0/modulate = Color(0.529412, 0.00392157, 0.607843, 1)
+1:0/0 = 0
+1:0/0/modulate = Color(0.529412, 0.00392157, 0.607843, 1)
+2:0/0 = 0
+2:0/0/modulate = Color(0.529412, 0.00392157, 0.607843, 1)
+3:0/0 = 0
+3:0/0/modulate = Color(0.529412, 0.00392157, 0.607843, 1)
+4:0/0 = 0
+4:0/0/modulate = Color(0.529412, 0.00392157, 0.607843, 1)
+0:1/0 = 0
+0:1/0/modulate = Color(0.529412, 0.00392157, 0.607843, 1)
+1:1/0 = 0
+1:1/0/modulate = Color(0.529412, 0.00392157, 0.607843, 1)
+2:1/0 = 0
+2:1/0/modulate = Color(0.529412, 0.00392157, 0.607843, 1)
+3:1/0 = 0
+3:1/0/modulate = Color(0.529412, 0.00392157, 0.607843, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iuyha"]
+texture = ExtResource("4_160l5")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khgle"]
+texture = ExtResource("3_ehfb2")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_i46hp"]
+sources/100 = SubResource("TileSetAtlasSource_gimvv")
+sources/101 = SubResource("TileSetAtlasSource_ehfb2")
+sources/4 = SubResource("TileSetAtlasSource_khgle")
+sources/1 = SubResource("TileSetAtlasSource_it44y")
+sources/20 = SubResource("TileSetAtlasSource_iuyha")
+sources/10 = SubResource("TileSetAtlasSource_c1nw4")
+sources/102 = SubResource("TileSetAtlasSource_160l5")
+
+[node name="Simulation" type="Node2D"]
+script = ExtResource("1_mwrr7")
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+position = Vector2(10, 38)
+tile_set = SubResource("TileSet_i46hp")
+format = 2
+
+[node name="Node2D" type="Node2D" parent="TileMap"]
+script = ExtResource("6_o1k16")
+
+[node name="Rewards" type="Node2D" parent="."]
+
+[node name="Start" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 8.00001
+offset_top = 6.00001
+offset_right = 264.0
+offset_bottom = 146.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("7_ehfb2")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = 65.0
+offset_top = 7.0
+offset_right = 97.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 12
+
+[node name="RewardFactor" type="Node2D" parent="."]
+visible = false
+
+[node name="RewardFactorValue" type="SpinBox" parent="RewardFactor"]
+offset_left = 141.0
+offset_top = 7.0
+offset_right = 227.563
+offset_bottom = 43.0
+scale = Vector2(0.7, 0.7)
+max_value = 10.0
+step = 0.1
+value = 0.2
+
+[node name="OpenNewMapDialog" type="TextureButton" parent="."]
+offset_left = 270.0
+offset_top = 5.0
+offset_right = 526.0
+offset_bottom = 145.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("7_ehfb2")
+
+[node name="ResetButton" type="TextureButton" parent="."]
+offset_left = 213.0
+offset_top = 6.0
+offset_right = 469.0
+offset_bottom = 146.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("7_ehfb2")
+
+[node name="ClearHistory" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 476.0
+offset_top = 5.0
+offset_right = 732.0
+offset_bottom = 145.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("7_ehfb2")
+
+[node name="Chest" type="Node2D" parent="."]
+
+[node name="NewMapDialog" type="Window" parent="."]
+initial_position = 1
+size = Vector2i(200, 320)
+visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NewMapDialog"]
+offset_right = 100.0
+offset_bottom = 24.0
+text = "Dimensões"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NewMapDialog"]
+offset_left = 2.0
+offset_top = 26.0
+offset_right = 178.0
+offset_bottom = 57.0
+
+[node name="DimensionX" type="SpinBox" parent="NewMapDialog/HBoxContainer"]
+layout_mode = 2
+min_value = 10.0
+max_value = 32.0
+value = 32.0
+
+[node name="DimensionY" type="SpinBox" parent="NewMapDialog/HBoxContainer"]
+layout_mode = 2
+min_value = 10.0
+max_value = 20.0
+value = 20.0
+select_all_on_focus = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="NewMapDialog"]
+offset_left = 5.0
+offset_top = 61.0
+offset_right = 185.0
+offset_bottom = 85.0
+text = "Nº Recompensas"
+
+[node name="RewardsAmount" type="SpinBox" parent="NewMapDialog"]
+offset_left = 7.0
+offset_top = 87.0
+offset_right = 93.5625
+offset_bottom = 118.0
+min_value = 5.0
+value = 5.0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="NewMapDialog"]
+offset_left = 8.0
+offset_top = 125.0
+offset_right = 188.0
+offset_bottom = 149.0
+text = "Distribuição Terrenos"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="NewMapDialog"]
+offset_left = 11.0
+offset_top = 150.0
+offset_right = 48.0
+offset_bottom = 167.0
+theme_override_font_sizes/normal_font_size = 12
+text = "Plano"
+
+[node name="PlanoProportion" type="SpinBox" parent="NewMapDialog"]
+offset_left = 8.0
+offset_top = 168.0
+offset_right = 94.5625
+offset_bottom = 199.0
+value = 1.0
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="NewMapDialog"]
+offset_left = 106.0
+offset_top = 152.0
+offset_right = 164.0
+offset_bottom = 169.0
+theme_override_font_sizes/normal_font_size = 12
+text = "Arenoso"
+
+[node name="ArenosoProportion" type="SpinBox" parent="NewMapDialog"]
+offset_left = 105.0
+offset_top = 168.0
+offset_right = 191.562
+offset_bottom = 199.0
+value = 1.0
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="NewMapDialog"]
+offset_left = 11.0
+offset_top = 200.0
+offset_right = 69.0
+offset_bottom = 217.0
+theme_override_font_sizes/normal_font_size = 12
+text = "Rochoso"
+
+[node name="RochosoProportion" type="SpinBox" parent="NewMapDialog"]
+offset_left = 8.0
+offset_top = 216.0
+offset_right = 94.5625
+offset_bottom = 247.0
+value = 1.0
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="NewMapDialog"]
+offset_left = 108.0
+offset_top = 202.0
+offset_right = 166.0
+offset_bottom = 219.0
+theme_override_font_sizes/normal_font_size = 12
+text = "Pantano"
+
+[node name="PantanoProportion" type="SpinBox" parent="NewMapDialog"]
+offset_left = 106.0
+offset_top = 218.0
+offset_right = 192.562
+offset_bottom = 249.0
+value = 1.0
+
+[node name="EmptyPlaceCheckBox" type="CheckBox" parent="NewMapDialog"]
+offset_left = 17.0
+offset_top = 255.0
+offset_right = 41.0
+offset_bottom = 279.0
+theme_override_font_sizes/font_size = 12
+text = "Espaços Vazios"
+flat = true
+
+[node name="NewMap" type="Button" parent="NewMapDialog"]
+offset_left = 49.0
+offset_top = 284.0
+offset_right = 146.0
+offset_bottom = 315.0
+text = "Novo Mapa"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 530.0
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0, 0, 0, 1)
+
+[node name="AlgorithmMetrics" type="Node2D" parent="."]
+
+[node name="Play" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(36, 19)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("8_1hwtu")
+
+[node name="Restaurar" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(238, 19)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("9_it44y")
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(297, 18)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("9_o1k16")
+
+[node name="TrashWhite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(502, 18)
+scale = Vector2(0.068, 0.068)
+texture = ExtResource("11_it44y")
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="button_down" from="OpenNewMapDialog" to="." method="_on_open_new_map_dialog_button_down"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="ClearHistory" to="." method="_on_clear_history_pressed"]
+[connection signal="close_requested" from="NewMapDialog" to="." method="_on_window_close_requested"]
+[connection signal="pressed" from="NewMapDialog/NewMap" to="." method="_on_new_map_pressed"]
